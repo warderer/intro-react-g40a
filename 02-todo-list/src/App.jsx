@@ -1,11 +1,10 @@
 import './App.css'
 
-function App() {
-
+function App () {
   return (
     <>
       <h1>Todo List</h1>
-      <input type="text" placeholder="Escribe una tarea" />
+      <input type='text' placeholder='Escribe una tarea' />
       <button>Añadir</button>
       {/* ul>li{Item $}*3>button{Eliminar} */}
       <ul>
