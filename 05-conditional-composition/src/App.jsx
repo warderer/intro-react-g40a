@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import Widget from './components/Widget/Widget'
 
 function App () {
   // Estado para saber si el usuario ha iniciado sesión
@@ -24,12 +25,19 @@ function App () {
         isLoggedIn
           ? (
             <div>
-              <button onClick={handleLogout}>Cerrar sesión</button>
+              <Widget title='Perfil de Usuario'>
+                <p><strong>Usuario:</strong> César Guerra</p>
+                <p><strong>Rol:</strong> Administrador</p>
+                <button onClick={handleLogout}>Cerrar sesión</button>
+              </Widget>
             </div>
             )
           : (
             <div>
-              <button onClick={handleLogin}>Iniciar sesión</button>
+              <Widget title='Iniciar Sesión'>
+                <p>Por favor, inicia sesión para continuar</p>
+                <button onClick={handleLogin}>Iniciar sesión</button>
+              </Widget>
             </div>
             )
       }
