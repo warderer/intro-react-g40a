@@ -30,9 +30,7 @@ export function formReducer (state, action) {
         }
       }
     case 'RESET':
-      return {
-        initialState
-      }
+      return initialState
     default:
       return state
   }
