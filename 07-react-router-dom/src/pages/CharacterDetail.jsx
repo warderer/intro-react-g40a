@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom' // 1.Importar useParams
 
 const CharacterDetail = () => {
-  const { id } = useParams() // 2. Traer el id de los params
+  const id = 1 // TODO: Hacer dinámico por medio de useParams
   // TODO: Hacer uso del hook useNavigate
 
   const [character, setCharacter] = useState(null)
