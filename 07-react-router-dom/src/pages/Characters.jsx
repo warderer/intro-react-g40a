@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-// TODO: Importar Link de react-router-dom
+import { Link } from 'react-router-dom'
 
 const Characters = () => {
   const [characters, setCharacters] = useState([])
@@ -28,11 +28,10 @@ const Characters = () => {
       <h1>Personajes de Rick and Morty</h1>
       <div className='characters-grid'>
         {characters.map((character) => (
-          // TODO: Implementar Link
-          <a href={`/character/${character.id}`} key={character.id} className='character-card'>
+          <Link to={`/character/${character.id}`} key={character.id} className='character-card'>
             <img src={character.image} alt={character.name} />
             <h3>{character.name}</h3>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
